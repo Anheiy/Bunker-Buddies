@@ -79,6 +79,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5aeff91148f9c6c459bc883b29f52614,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: -957045817325088999}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5aeff91148f9c6c459bc883b29f52614,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7535103589884731200}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5aeff91148f9c6c459bc883b29f52614,
         type: 3}
@@ -111,6 +115,37 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 7535103589884731200}
   _networkObjectCache: {fileID: 7535103589884731200}
   itemInformation: {fileID: 11400000, guid: f18e91f50ac80ee4380b40a4e7df9d5a, type: 2}
+--- !u!114 &-957045817325088999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008800792260927100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0041ebc5969dc3a44aa4987aa7e216f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 7535103589884731200}
+  _networkObjectCache: {fileID: 0}
+  itemInformation: {fileID: 11400000, guid: f18e91f50ac80ee4380b40a4e7df9d5a, type: 2}
+  interactable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2904099112567715200}
+        m_TargetAssemblyTypeName: PickupableObject, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7535103589884731200
 MonoBehaviour:
   m_ObjectHideFlags: 0

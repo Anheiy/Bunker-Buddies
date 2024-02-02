@@ -8,7 +8,11 @@ public class InventoryManager : MonoBehaviour
     public Dictionary<int,Item> slotlist = new Dictionary<int,Item>();
     public int maxItems = 10;
     public HotkeyManager hotkey;
-    
+    public Item HeldItem;
+    private void Update()
+    {
+        HeldItem = slotlist[hotkey.currentlySelectedHotKey + 1];
+    }
     private void Start()
     {
         hotkey = this.GetComponent<HotkeyManager>();

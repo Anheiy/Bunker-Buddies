@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5580666136693515438}
   - component: {fileID: 7387824875425283691}
   - component: {fileID: 5529019244115183927}
+  - component: {fileID: 9077466594351298467}
   m_Layer: 0
   m_Name: Base Object
   m_TagString: Item
@@ -123,12 +124,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 7387824875425283691}
   _networkObjectCache: {fileID: 7387824875425283691}
-  LookingAt: {fileID: 0}
-  player: {fileID: 0}
   itemInformation: {fileID: 11400000, guid: d24b6c7266ab8b940ad67539387ce59a, type: 2}
-  sp: {fileID: 0}
-  pickupableText: {fileID: 0}
-  inventory: {fileID: 0}
 --- !u!114 &7387824875425283691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +142,7 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours:
   - {fileID: 5580666136693515438}
+  - {fileID: 9077466594351298467}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -157,7 +154,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 15
+  <PrefabId>k__BackingField: 18
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 584410112
   <SceneId>k__BackingField: 0
@@ -189,3 +186,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &9077466594351298467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935664842545659269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0041ebc5969dc3a44aa4987aa7e216f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 1
+  _addedNetworkObject: {fileID: 7387824875425283691}
+  _networkObjectCache: {fileID: 7387824875425283691}
+  sp: {fileID: 0}
+  LookingAt: {fileID: 0}
+  interactable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5580666136693515438}
+        m_TargetAssemblyTypeName: PickupableObject, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

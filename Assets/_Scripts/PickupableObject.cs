@@ -17,23 +17,18 @@ public class PickupableObject : NetworkBehaviour
     void Update()
     {
         FindDependencies();
-        PickUp();
     }
 
-    private void PickUp()
+    public void PickUp()
     {
-        if (LookingAt.distanceBetween <= 2.2 && LookingAt.objectViewed == this.gameObject)
-        {
             LookingAt.pickupableText.text = "Pick Up " + itemInformation.SendName() + " (E)";
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Clicked at " + LookingAt.distanceBetween);
                 if (inventory.CheckInventory(itemInformation) == true)
                 {
                     DespawnObjectServer(this.gameObject);
                 }
             }
-        }
     }
     [ServerRpc(RequireOwnership = false)]
     void DespawnObjectServer(GameObject objToDespawn)
@@ -49,8 +44,10 @@ public class PickupableObject : NetworkBehaviour
         }
         if (!sp)
         {
-            Debug.Log("BING");
             sp = GameObject.Find("GameManager").GetComponent<ServerPlayer>();
+        }
+        if(!LookingAt)
+        {
             LookingAt = sp.player.GetComponent<LookingAt>();
         }
     }

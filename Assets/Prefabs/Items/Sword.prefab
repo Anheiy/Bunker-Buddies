@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7319051321368136289}
   - component: {fileID: 4772969305639250055}
   - component: {fileID: 7273126345694595166}
+  - component: {fileID: -5876728255880641986}
   - component: {fileID: 6107495199971170505}
   - component: {fileID: 2013493628967656785}
   m_Layer: 0
@@ -123,12 +124,38 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 6107495199971170505}
   _networkObjectCache: {fileID: 6107495199971170505}
-  LookingAt: {fileID: 0}
-  player: {fileID: 0}
   itemInformation: {fileID: 11400000, guid: da6e7586a9d83bd4581fdbec65cd73fd, type: 2}
-  sp: {fileID: 0}
-  pickupableText: {fileID: 0}
-  inventory: {fileID: 0}
+--- !u!114 &-5876728255880641986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649481245477357951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0041ebc5969dc3a44aa4987aa7e216f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 6107495199971170505}
+  _networkObjectCache: {fileID: 0}
+  itemInformation: {fileID: 11400000, guid: da6e7586a9d83bd4581fdbec65cd73fd, type: 2}
+  interactable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7273126345694595166}
+        m_TargetAssemblyTypeName: PickupableObject, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6107495199971170505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +184,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 8
+  <PrefabId>k__BackingField: 9
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 584410112
   <SceneId>k__BackingField: 0

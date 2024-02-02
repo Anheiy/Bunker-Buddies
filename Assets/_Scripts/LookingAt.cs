@@ -49,7 +49,7 @@ public class LookingAt : NetworkBehaviour
     public void EnablePickup()
     {
         //rework this system make it go off a object tag = interactable
-        if (distanceBetween <= 2.2 && objectViewed.GetComponent<PickupableObject>() != null || objectViewed.GetComponent<Pipe>() != null)
+        if (distanceBetween <= 2.2 && objectViewed.GetComponent<Interactable>() != null )
         {
             pickupableText.enabled = true;
         }
