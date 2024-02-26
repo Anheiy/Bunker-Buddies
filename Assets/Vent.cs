@@ -1,12 +1,14 @@
+using FishNet.Object;
+using FishNet.Object.Synchronizing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vent : MonoBehaviour
+public class Vent : NetworkBehaviour
 {
     public Material openMat;
     public Material closeMat;
-    public bool isOpen = true;
+    [SyncVar] public bool isOpen = true;
     private LookingAt LookingAt;
     private ServerPlayer sp;
     public Power power;
@@ -19,7 +21,7 @@ public class Vent : MonoBehaviour
         FindDependencies();
         if (power.getPower() <= 0)
         {
-            OpenVent();
+            ToggleVent();
         }
         //logic for vent power
         if (!isOpen)
@@ -46,25 +48,39 @@ public class Vent : MonoBehaviour
             LookingAt.pickupableText.text = "Open Vent (E)";
         if (Input.GetKeyDown(KeyCode.E))
         {
+            ToggleVent();
+        }
+    }
+    [ServerRpc(RequireOwnership = false)]
+    private void ToggleVent()
+    {
+        Function();
+        Debug.Log("Toggle Vent!");
+    }
+
+    [ObserversRpc(BufferLast = true)]
+    private void Function()
+    {
+        if (power.getPower() > 0)
+        {
             if (isOpen)
             {
-                CloseVent();
+                this.GetComponent<MeshRenderer>().material = openMat;
+                isOpen = false;
             }
             else
             {
-                OpenVent();
+                this.GetComponent<MeshRenderer>().material = closeMat;
+                isOpen = true;
             }
         }
-    }
-    private void CloseVent()
-    {
-        this.GetComponent<MeshRenderer>().material = openMat;
-        isOpen = false;
-    }
-    private void OpenVent()
-    {
-        this.GetComponent<MeshRenderer>().material = closeMat;
-        isOpen = true;
+        else
+        {
+            //if power is 0, close vents
+            this.GetComponent<MeshRenderer>().material = closeMat;
+            isOpen = true;
+        }
+        
     }
     private void FindDependencies()
     {

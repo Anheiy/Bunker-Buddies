@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4209773041458545789}
   - component: {fileID: 6246469289033815547}
   - component: {fileID: 9165391486223631530}
+  - component: {fileID: 9141060574621932126}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Item
@@ -67,6 +68,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6269067fdeadf8640b3c6846cf62e2ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -218,3 +220,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &9141060574621932126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881232679074263732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fef2efbb21678b42996698cbbff53e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

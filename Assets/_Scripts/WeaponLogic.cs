@@ -24,9 +24,9 @@ public class WeaponLogic : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                if (inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendItemType() == "weapon")
+                if (inventory.HeldItem.SendItemType() == "weapon")
                 {
-                    pAttack.AttackRay(inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendweaponDamage(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendweaponCooldown(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendweaponRange(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendweaponLayer());
+                    pAttack.AttackRay(inventory.HeldItem.SendweaponDamage(), inventory.HeldItem.SendweaponCooldown(), inventory.HeldItem.SendweaponRange(), inventory.HeldItem.SendweaponLayer());
                 }
                 else
                 {

@@ -1,9 +1,10 @@
+using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
-public class Generator : MonoBehaviour
+public class Generator : NetworkBehaviour
 {
     private LookingAt LookingAt;
     private ServerPlayer sp;

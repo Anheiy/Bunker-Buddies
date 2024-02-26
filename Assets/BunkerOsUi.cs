@@ -11,7 +11,6 @@ public class BunkerOsUi : MonoBehaviour
     public GameObject ShopPanel;
     private LookingAt LookingAt;
     private ServerPlayer sp;
-
     private void Update()
     {
         FindDependencies();
@@ -26,7 +25,9 @@ public class BunkerOsUi : MonoBehaviour
             if (CameraPanel.activeInHierarchy)
                 CameraPanel.SetActive(false);
             else
+            {
                 CameraPanel.SetActive(true);
+            }
         }
     }
     public void TurnOnCreaturePanel()
@@ -38,7 +39,11 @@ public class BunkerOsUi : MonoBehaviour
             if (CreaturePanel.activeInHierarchy)
                 CreaturePanel.SetActive(false);
             else
+            {
                 CreaturePanel.SetActive(true);
+            }
+                
+            
         }
     }
     public void TurnOnShopPanel()
@@ -62,8 +67,11 @@ public class BunkerOsUi : MonoBehaviour
             if (MapPanel.activeInHierarchy)
                 MapPanel.SetActive(false);
             else
+            {
                 MapPanel.SetActive(true);
+            }
         }
+
     }
     public void TurnOnEmailPanel()
     {
@@ -86,7 +94,6 @@ public class BunkerOsUi : MonoBehaviour
         MapPanel.SetActive(false);
         EmailPanel.SetActive(false);
         ShopPanel.SetActive(false);
-
     }
     private void FindDependencies()
     {

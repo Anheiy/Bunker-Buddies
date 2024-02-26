@@ -67,6 +67,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2545ff44cc6f0bc40be6c47cf01e8365, type: 2}
+  - {fileID: 2100000, guid: 6269067fdeadf8640b3c6846cf62e2ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +141,8 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 6107495199971170505}
   _networkObjectCache: {fileID: 0}
-  itemInformation: {fileID: 11400000, guid: da6e7586a9d83bd4581fdbec65cd73fd, type: 2}
+  sp: {fileID: 0}
+  LookingAt: {fileID: 0}
   interactable:
     m_PersistentCalls:
       m_Calls:

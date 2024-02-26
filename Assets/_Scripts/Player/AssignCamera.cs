@@ -8,7 +8,7 @@ using FishNet.Connection;
 public class AssignCamera : NetworkBehaviour
 {
     Camera playerCamera;
-    private float cameraYOffset = 0.4f;
+    [SerializeField]private float cameraYOffset = 0.4f;
     public void Update()
     {
         if(base.IsOwner)

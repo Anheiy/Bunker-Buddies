@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 3617158276746542835}
   - component: {fileID: -8475767391930251697}
   - component: {fileID: 3323003941033822146}
+  - component: {fileID: 6434572567387713159}
   - component: {fileID: -908925057142310838}
   - component: {fileID: 577958414103049393}
   - component: {fileID: 8862209367358934568}
@@ -302,6 +303,7 @@ MonoBehaviour:
   objectViewed: {fileID: 0}
   distanceBetween: 0
   pickupableText: {fileID: 0}
+  uiObj: {fileID: 0}
 --- !u!114 &-1821304648912511237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,9 +362,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21f64a3f6ec1a84b98c5937fe66aaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 11
+  _componentIndexCache: 10
   _addedNetworkObject: {fileID: -908925057142310838}
   _networkObjectCache: {fileID: -908925057142310838}
+  cameraYOffset: 0.4
 --- !u!114 &3323003941033822146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +378,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724a339b94f4f2e43b750b5f6536499c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6434572567387713159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231289535478609382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37522e2696bfb13438450fc92670d4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 0
 --- !u!114 &-908925057142310838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,8 +418,8 @@ MonoBehaviour:
   - {fileID: -1821304648912511237}
   - {fileID: 3868576486539976383}
   - {fileID: 3617158276746542835}
-  - {fileID: 577958414103049393}
   - {fileID: -8475767391930251697}
+  - {fileID: 577958414103049393}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -414,7 +431,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 1
+  <PrefabId>k__BackingField: 2
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0
@@ -431,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 10
+  _componentIndexCache: 11
   _addedNetworkObject: {fileID: -908925057142310838}
   _networkObjectCache: {fileID: -908925057142310838}
   _componentConfiguration: 0

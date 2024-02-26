@@ -7,13 +7,15 @@ using FishNet.Object.Synchronizing;
 using FishNet.Demo.AdditiveScenes;
 using Unity.VisualScripting;
 using TMPro;
+using Unity.Burst.CompilerServices;
 
 public class LookingAt : NetworkBehaviour
 {
     private Camera playerCam;
     public GameObject objectViewed;
     public float distanceBetween;
-    public TextMeshProUGUI pickupableText; 
+    public TextMeshProUGUI pickupableText;
+    public GameObject uiObj;
 
     public override void OnStartClient()
     {
@@ -26,13 +28,15 @@ public class LookingAt : NetworkBehaviour
     private void Start()
     {
         playerCam = Camera.main;
-        pickupableText = GameObject.Find("PickupText").GetComponent<TextMeshProUGUI>();
+        pickupableText = GameObject.Find("InteractableText").GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
     {
         ShootRay();
         EnablePickup();
+        ShootUIRay();
+
     }
     public void ShootRay()
     {
@@ -45,6 +49,16 @@ public class LookingAt : NetworkBehaviour
         }
         if(objectViewed != null) 
         distanceBetween = Vector3.Distance(this.gameObject.transform.position, objectViewed.transform.position);
+    }
+    public void ShootUIRay()
+    {
+        Ray ray = playerCam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            this.uiObj = hit.transform.gameObject;
+        }
+
     }
     public void EnablePickup()
     {

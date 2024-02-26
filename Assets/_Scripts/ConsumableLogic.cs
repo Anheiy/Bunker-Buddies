@@ -38,19 +38,19 @@ public class ConsumableLogic : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                if (inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendItemType() == "consumable")
+                if (inventory.HeldItem.SendItemType() == "consumable")
                 {
-                    if (inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableHeal() != 0) 
+                    if (inventory.HeldItem.SendconsumableHeal() != 0) 
                     CheckHealth();
-                    if (inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableStamina() != 0)
+                    if (inventory.HeldItem.SendconsumableStamina() != 0)
                     CheckStamina();
-                    if (inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableThirst() != 0)
+                    if (inventory.HeldItem.SendconsumableThirst() != 0)
                     CheckThirst();
-                    if (inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableHunger() != 0)
+                    if (inventory.HeldItem.SendconsumableHunger() != 0)
                     CheckHunger();
                     if (oneActive)
                     {
-                        inventory.RemoveItem(hotkey.currentlySelectedHotKey + 1);
+                        inventory.RemoveItem(hotkey.currentlySelectedHotKey);
                         oneActive = false;
                     }
                 }
@@ -65,7 +65,7 @@ public class ConsumableLogic : MonoBehaviour
     {
         if (health.hp < health.maxhp)
         {
-            health.modifyHealth(inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableHeal(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendlengthofConsume(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendtickAmount(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendtickTime());
+            health.modifyHealth(inventory.HeldItem.SendconsumableHeal(), inventory.HeldItem.SendlengthofConsume(), inventory.HeldItem.SendtickAmount(), inventory.HeldItem.SendtickTime());
             oneActive = true;
         }
     }
@@ -73,7 +73,7 @@ public class ConsumableLogic : MonoBehaviour
     {
         if(stamina.stamina < stamina.maxStamina)
         {
-            stamina.ModifyStamina(inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableStamina(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendlengthofConsume());
+            stamina.ModifyStamina(inventory.HeldItem.SendconsumableStamina(), inventory.HeldItem.SendlengthofConsume());
             oneActive = true;
         }
     }
@@ -81,7 +81,7 @@ public class ConsumableLogic : MonoBehaviour
     {
         if( thirst.thirst < thirst.maxThirst)
         {
-            thirst.ModifyThirst(inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableThirst(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendlengthofConsume());
+            thirst.ModifyThirst(inventory.HeldItem.SendconsumableThirst(), inventory.HeldItem.SendlengthofConsume());
             oneActive = true;
         }
     
@@ -90,7 +90,7 @@ public class ConsumableLogic : MonoBehaviour
     {
         if(hunger.hunger < hunger.maxHunger)
         {
-            hunger.ModifyHunger(inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendconsumableHunger(), inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendlengthofConsume());
+            hunger.ModifyHunger(inventory.HeldItem.SendconsumableHunger(), inventory.HeldItem.SendlengthofConsume());
             oneActive = true;
         }
     }

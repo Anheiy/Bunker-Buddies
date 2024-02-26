@@ -1,15 +1,20 @@
+using FishNet.Object.Synchronizing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FishNet.Transporting;
 using UnityEngine.UI;
+using FishNet.Object;
 
-public class Power : MonoBehaviour
+public class Power : NetworkBehaviour
 {
-    [SerializeField] private float power = 100;
+    [SyncVar] private float power = 100;
     [SerializeField] private float powerWeight = 1;
     [SerializeField] private Image powerImage;
-    private void Start()
+    public override void OnStartClient()
     {
+        base.OnStartClient();
+        if(base.IsHost)
         InvokeRepeating("PowerDegen", 0, 1);
     }
     private void Update()
@@ -24,14 +29,17 @@ public class Power : MonoBehaviour
             power = 0;
         }
     }
+    [ServerRpc(RequireOwnership = false)]
     public void AddPower(float addedPower)
     {
         power = power + addedPower;
     }
+    [ServerRpc(RequireOwnership = false)] 
     public void SubtractPower(float subtractedPower)
     {
         power = power - subtractedPower;
     }
+    [ServerRpc(RequireOwnership = false)]
     private void PowerDegen()
     {
         SubtractPower(powerWeight);

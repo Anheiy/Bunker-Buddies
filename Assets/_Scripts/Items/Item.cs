@@ -12,6 +12,7 @@ public class Item : ScriptableObject
 {
     //item info
     enum itemType { weapon, consumable, tool };
+    public enum toolType { light, talkie };
     //all objects have these
     [Header("Base Information")]
     [SerializeField] new string name;
@@ -19,6 +20,7 @@ public class Item : ScriptableObject
     [SerializeField] itemType ItemType;
     [SerializeField] Sprite icon;
     [SerializeField] NetworkObject Prefab;
+
 
     //weapons
     [System.Serializable]
@@ -49,12 +51,19 @@ public class Item : ScriptableObject
     [System.Serializable]
     public class Tool
     {
+        //Core of Tool
+        public bool isActive;
+        //Possible Features
         public bool isLightable;
+        public toolType toolType;
+        public float toolChargeTick = 1;
     }
 
     public Weapon weaponData;
     public Consumable consumableData;
     public Tool toolData;
+    #region Senders
+    
     public string SendItemType()
     {
         return ItemType.ToString();
@@ -135,11 +144,21 @@ public class Item : ScriptableObject
     {
         return toolData.isLightable;
     }
+    public float SendtoolChargeTick()
+    {
+        return toolData.toolChargeTick;
+    }
+    public toolType SendtoolType()
+    {
+        return toolData.toolType;
+    }
+    #endregion
 }
 
-    
-    
 
 
-  
+
+
+
+
 

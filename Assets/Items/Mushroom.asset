@@ -33,4 +33,7 @@ MonoBehaviour:
     tickAmount: 1
     tickTime: 0
   toolData:
+    isActive: 1
     isLightable: 0
+    toolType: 0
+    toolChargeTick: 1

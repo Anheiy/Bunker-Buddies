@@ -24,12 +24,23 @@ public class DropItem : NetworkBehaviour
         FindDependencies();
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if(hotkey.currentlySelectedHotKey > -1 && inventory.slotlist[hotkey.currentlySelectedHotKey + 1] != null)
+            if (hotkey.currentlySelectedHotKey > -1 && inventory.slotlist[hotkey.currentlySelectedHotKey] != null)
             {
-                DropItemOnServer(inventory.slotlist[hotkey.currentlySelectedHotKey + 1].SendObject(), this.gameObject.transform);
-                inventory.RemoveItem(hotkey.currentlySelectedHotKey + 1);
+                if (inventory.slotlist[hotkey.currentlySelectedHotKey].SendItemType() == "tool")
+                DropItemOnServer(inventory.slotlist[hotkey.currentlySelectedHotKey].SendObject(), this.gameObject.transform, inventory.charges[hotkey.currentlySelectedHotKey]);
+                else
+                DropItemOnServer(inventory.slotlist[hotkey.currentlySelectedHotKey].SendObject(), this.gameObject.transform);
+                inventory.RemoveItem(hotkey.currentlySelectedHotKey);
             }
+
         }
+    }
+    [ServerRpc]
+    public void DropItemOnServer(NetworkObject obj, Transform player, int charge)
+    {
+        NetworkObject spawned = NetworkManager.GetPooledInstantiated(obj, player.position + player.forward, Quaternion.identity, true);
+        ServerManager.Spawn(spawned);
+        spawned.gameObject.GetComponent<Charge>().charge = charge;
     }
     [ServerRpc]
     public void DropItemOnServer(NetworkObject obj, Transform player)

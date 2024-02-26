@@ -21,14 +21,24 @@ public class PickupableObject : NetworkBehaviour
 
     public void PickUp()
     {
-            LookingAt.pickupableText.text = "Pick Up " + itemInformation.SendName() + " (E)";
-            if (Input.GetKeyDown(KeyCode.E))
+        LookingAt.pickupableText.text = "Pick Up " + itemInformation.SendName() + " (E)";
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (itemInformation.SendItemType() == "tool")
+            {
+                if (inventory.CheckInventory(itemInformation, this.GetComponent<Charge>().charge) == true)
+                {
+                    DespawnObjectServer(this.gameObject);
+                }
+            }
+            else
             {
                 if (inventory.CheckInventory(itemInformation) == true)
                 {
                     DespawnObjectServer(this.gameObject);
                 }
             }
+        }
     }
     [ServerRpc(RequireOwnership = false)]
     void DespawnObjectServer(GameObject objToDespawn)
