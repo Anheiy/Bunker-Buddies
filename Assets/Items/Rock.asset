@@ -33,4 +33,12 @@ MonoBehaviour:
     tickAmount: 1
     tickTime: 0
   toolData:
+    isActive: 0
     isLightable: 0
+    toolType: 0
+    toolChargeTick: 1
+  shopData:
+    Cost: 5
+    MinMulti: 1
+    MaxMulti: 1.5
+    SellPrice: 4

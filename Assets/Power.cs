@@ -10,7 +10,11 @@ public class Power : NetworkBehaviour
 {
     [SyncVar] private float power = 100;
     [SerializeField] private float powerWeight = 1;
-    [SerializeField] private Image powerImage;
+    private Image powerImage;
+    public void Start()
+    {
+        powerImage = GameObject.Find("PowerImage").GetComponent<Image>();
+    }
     public override void OnStartClient()
     {
         base.OnStartClient();

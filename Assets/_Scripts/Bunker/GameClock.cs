@@ -14,10 +14,14 @@ public class GameClock : NetworkBehaviour
     public int days;
     public int maxSeconds = 60;
     public int updateTick = 10;
-    public TextMeshProUGUI daysText;
-    public TextMeshProUGUI clockText;
+    private TextMeshProUGUI daysText;
+    private TextMeshProUGUI clockText;
     // Start is called before the first frame update
- 
+    private void Start()
+    {
+        daysText = GameObject.Find("Days").GetComponent<TextMeshProUGUI>();
+        clockText = GameObject.Find("Clock").GetComponent<TextMeshProUGUI>();
+    }
     private void Update()
     {
             if (StartCount == false)

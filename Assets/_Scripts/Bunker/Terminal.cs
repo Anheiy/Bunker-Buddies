@@ -10,7 +10,7 @@ public class Terminal : NetworkBehaviour
     private ServerPlayer sp;
     [Header("Functionality")]
     public Transform PlayerPos;
-    public CinematicToggle cinematic;
+    private CinematicToggle cinematic;
     public GameObject termOff;
     public GameObject termOn;
     private bool InTerminal = false;
@@ -81,6 +81,10 @@ public class Terminal : NetworkBehaviour
         if (!lookingAt)
         {
             lookingAt = sp.player.GetComponent<LookingAt>();
+        }
+        if(!cinematic)
+        {
+            cinematic = GameObject.Find("GameManager").GetComponent<CinematicToggle>();
         }
     }
     [ServerRpc(RequireOwnership = false)]

@@ -58,10 +58,19 @@ public class Item : ScriptableObject
         public toolType toolType;
         public float toolChargeTick = 1;
     }
+    [System.Serializable]
+    public class Shop
+    {
+        public int Cost;
+        public float MinMulti;
+        public float MaxMulti;
+        public int SellPrice;
+    }
 
     public Weapon weaponData;
     public Consumable consumableData;
     public Tool toolData;
+    public Shop shopData;
     #region Senders
     
     public string SendItemType()
@@ -151,6 +160,23 @@ public class Item : ScriptableObject
     public toolType SendtoolType()
     {
         return toolData.toolType;
+    }
+
+    public int SendCost()
+    {
+        return shopData.Cost;
+    }
+    public float SendMinMultiplier()
+    {
+        return shopData.MinMulti;
+    }
+    public float SendMaxMultiplier()
+    {
+        return shopData.MaxMulti;
+    }
+    public int SendSellPrice()
+    {
+        return shopData.SellPrice;
     }
     #endregion
 }

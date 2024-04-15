@@ -46,9 +46,8 @@ public class Generator : NetworkBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 power.AddPower(100);
-                inventory.RemoveItem(inventory.hotkey.currentlySelectedHotKey + 1);
+                inventory.RemoveItem(inventory.hotkey.currentlySelectedHotKey);
             }
-            
         }
     }
     private void FindDependencies()

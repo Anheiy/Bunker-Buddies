@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6651337669347934314
+--- !u!1 &4838287365318683872
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7889632992703582678}
-  - component: {fileID: 5534393417990631262}
-  - component: {fileID: 4553276972426627417}
-  - component: {fileID: 391073191969500307}
-  - component: {fileID: 4351545925106185058}
-  - component: {fileID: 3626556477208065743}
-  - component: {fileID: 5635580949803423714}
-  - component: {fileID: 5036023360062778605}
+  - component: {fileID: 2372867221934161996}
+  - component: {fileID: 9054019621669279256}
+  - component: {fileID: 8884689592611758745}
+  - component: {fileID: 5541034239461513626}
+  - component: {fileID: 7358926631560487359}
+  - component: {fileID: 6592597263307092788}
+  - component: {fileID: 5593673875966473746}
   m_Layer: 0
-  m_Name: Rock
-  m_TagString: Item
+  m_Name: Vent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7889632992703582678
+--- !u!4 &2372867221934161996
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
+  m_GameObject: {fileID: 4838287365318683872}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -259.78, y: -183.06961, z: 1.929}
-  m_LocalScale: {x: 0.7606246, y: 0.7606246, z: 0.7606246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.126622, y: 1.99, z: -15.915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5534393417990631262
+--- !u!33 &9054019621669279256
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
-  m_Mesh: {fileID: -3573931800114560834, guid: e2aa72d33ac58384a8d35fcc0756828e, type: 3}
---- !u!23 &4553276972426627417
+  m_GameObject: {fileID: 4838287365318683872}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8884689592611758745
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
+  m_GameObject: {fileID: 4838287365318683872}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +66,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  - {fileID: 2100000, guid: 6269067fdeadf8640b3c6846cf62e2ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &391073191969500307
+--- !u!65 &5541034239461513626
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
+  m_GameObject: {fileID: 4838287365318683872}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -108,47 +106,54 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.55889624, y: 0.4056985, z: 0.4350952}
-  m_Center: {x: 0.0130330995, y: 0.19844021, z: 0.06318445}
---- !u!114 &4351545925106185058
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7358926631560487359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
+  m_GameObject: {fileID: 4838287365318683872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 601cbd869716cef42b3650f92bd54fce, type: 3}
+  m_Script: {fileID: 11500000, guid: db67ffd3d1d2c9a4abb08252161895c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _componentIndexCache: 0
-  _addedNetworkObject: {fileID: 5635580949803423714}
-  _networkObjectCache: {fileID: 5635580949803423714}
-  itemInformation: {fileID: 11400000, guid: d24b6c7266ab8b940ad67539387ce59a, type: 2}
---- !u!114 &3626556477208065743
+  _addedNetworkObject: {fileID: 5593673875966473746}
+  _networkObjectCache: {fileID: 5593673875966473746}
+  openMat: {fileID: -3963241562183589234, guid: 8c8a930a1c50f324aa5bf87102723f31,
+    type: 3}
+  closeMat: {fileID: -6126091556477775235, guid: 5aeff91148f9c6c459bc883b29f52614,
+    type: 3}
+  isOpen: 1
+  power: {fileID: 0}
+  timePerCloseTick: 0.1
+  tickPower: 0.1
+--- !u!114 &6592597263307092788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
+  m_GameObject: {fileID: 4838287365318683872}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0041ebc5969dc3a44aa4987aa7e216f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _componentIndexCache: 1
-  _addedNetworkObject: {fileID: 5635580949803423714}
-  _networkObjectCache: {fileID: 5635580949803423714}
+  _addedNetworkObject: {fileID: 5593673875966473746}
+  _networkObjectCache: {fileID: 5593673875966473746}
   sp: {fileID: 0}
   LookingAt: {fileID: 0}
   interactable:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4351545925106185058}
-        m_TargetAssemblyTypeName: PickupableObject, Assembly-CSharp
-        m_MethodName: PickUp
+      - m_Target: {fileID: 7358926631560487359}
+        m_TargetAssemblyTypeName: Vent, Assembly-CSharp
+        m_MethodName: ChangeVent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -158,13 +163,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5635580949803423714
+--- !u!114 &5593673875966473746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
+  m_GameObject: {fileID: 4838287365318683872}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
@@ -174,14 +179,14 @@ MonoBehaviour:
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours:
-  - {fileID: 4351545925106185058}
-  - {fileID: 3626556477208065743}
+  - {fileID: 7358926631560487359}
+  - {fileID: 6592597263307092788}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
-    Position: {x: -259.78, y: -183.06961, z: 1.929}
-    Rotation: {x: -0, y: -0, z: -0, w: 1}
-    LocalScale: {x: 0.7606246, y: 0.7606246, z: 0.7606246}
+    Position: {x: -15.126622, y: 1.99, z: -18.72279}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
   _isGlobal: 0
   _initializeOrder: 0
@@ -189,33 +194,6 @@ MonoBehaviour:
   NetworkObserver: {fileID: 0}
   <PrefabId>k__BackingField: 0
   <SpawnableCollectionId>k__BackingField: 0
-  _scenePathHash: 584410112
+  _scenePathHash: 2509166258
   <SceneId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 591669651873746368
---- !u!54 &5036023360062778605
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651337669347934314}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  <AssetPathHash>k__BackingField: 6274705525620616379

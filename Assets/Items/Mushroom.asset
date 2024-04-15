@@ -29,7 +29,7 @@ MonoBehaviour:
     hungerAmount: 10
     thirstAmount: 10
     speedAmount: 0
-    lengthOfConsume: 3
+    lengthOfConsume: 0
     tickAmount: 1
     tickTime: 0
   toolData:
@@ -37,3 +37,8 @@ MonoBehaviour:
     isLightable: 0
     toolType: 0
     toolChargeTick: 1
+  shopData:
+    Cost: 7
+    MinMulti: 0.7
+    MaxMulti: 1.5
+    SellPrice: 3
