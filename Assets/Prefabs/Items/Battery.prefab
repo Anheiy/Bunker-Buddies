@@ -159,6 +159,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InteractableType: 0
+  interactableKey: 101
+  toWhat: Pick Up
+  HoldTime: 0
 --- !u!114 &6246469289033815547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,3 +236,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fef2efbb21678b42996698cbbff53e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charge: 100

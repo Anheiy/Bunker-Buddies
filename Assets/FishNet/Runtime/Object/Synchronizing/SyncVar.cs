@@ -70,6 +70,8 @@ namespace FishNet.Object.Synchronizing
             base.InitializeInstance(nb, syncIndex, writePermission, readPermission, sendRate, channel, false);
         }
 
+
+
         /// <summary>
         /// Called when the SyncType has been registered, but not yet initialized over the network.
         /// </summary>

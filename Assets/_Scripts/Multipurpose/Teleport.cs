@@ -38,12 +38,7 @@ public class Teleport : MonoBehaviour
     }
     public void InteractableTeleport()
     {
-        LookingAt.pickupableText.text = "Go to " + LocationName +" (E)";
-        if (Input.GetKeyDown(KeyCode.E))
-        {
             StartCoroutine(TeleportToLocation());
-        }
-        
     }
 
     IEnumerator TeleportToLocation()

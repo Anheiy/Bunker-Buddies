@@ -840,13 +840,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0db8a0af42610847971e3220520411c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 2
+  _addedNetworkObject: {fileID: 310018988923962353}
+  _networkObjectCache: {fileID: 310018988923962353}
   deliveryLocation: {fileID: 0}
   ConfirmationPopup: {fileID: 2889739503102231520}
   itemImage: {fileID: 4396491667563468273}
   itemName: {fileID: 352418760213233594}
   itemAmount: {fileID: 6940659655488435008}
   Amount: 0
+  itemholder: {fileID: 0}
+  CurrentItem: {fileID: 0}
   ScrapManager: {fileID: 0}
+  spawnScene:
+    m_Handle: 0
 --- !u!114 &2312785791507018207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1425,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7413749811940691233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,6 +1461,7 @@ MonoBehaviour:
   _networkBehaviours:
   - {fileID: 4435589316897245551}
   - {fileID: 6244769476028355183}
+  - {fileID: 2615331934757263656}
   - {fileID: 309833818977671699}
   - {fileID: 3867824043288703009}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
@@ -1469,7 +1477,7 @@ MonoBehaviour:
   NetworkObserver: {fileID: 0}
   <PrefabId>k__BackingField: 0
   <SpawnableCollectionId>k__BackingField: 0
-  _scenePathHash: 2509166258
+  _scenePathHash: 0
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 6348921567915988541
 --- !u!114 &5553582504431678555
@@ -1606,6 +1614,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InteractableType: 0
+  interactableKey: 101
+  toWhat: Access the Terminal
+  HoldTime: 0
+  timer: 0
 --- !u!114 &6244769476028355183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1635,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 310018988923962353}
   _networkObjectCache: {fileID: 310018988923962353}
   PlayerPos: {fileID: 9056459316485781809}
-  cinematic: {fileID: 0}
   termOff: {fileID: 2912844836896547484}
   termOn: {fileID: 8691409056038890837}
   isOccupied: 0
@@ -3473,7 +3485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0041ebc5969dc3a44aa4987aa7e216f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 4
   _addedNetworkObject: {fileID: 310018988923962353}
   _networkObjectCache: {fileID: 310018988923962353}
   sp: {fileID: 0}
@@ -3493,6 +3505,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InteractableType: 0
+  interactableKey: 0
+  toWhat: 
+  HoldTime: 0
+  timer: 0
 --- !u!1 &4587863585435619503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,7 +6605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0041ebc5969dc3a44aa4987aa7e216f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 3
   _addedNetworkObject: {fileID: 310018988923962353}
   _networkObjectCache: {fileID: 310018988923962353}
   sp: {fileID: 0}
@@ -6608,6 +6625,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InteractableType: 0
+  interactableKey: 0
+  toWhat: 
+  HoldTime: 0
+  timer: 0
 --- !u!1 &7849215835879687197
 GameObject:
   m_ObjectHideFlags: 0

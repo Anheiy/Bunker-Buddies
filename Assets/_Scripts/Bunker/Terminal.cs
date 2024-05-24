@@ -40,9 +40,7 @@ public class Terminal : NetworkBehaviour
         }
         else
         {
-            lookingAt.pickupableText.text = "Press E to Toggle Terminal";
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+                lookingAt.pickupableText.text = "Press E to Toggle Terminal";
                 sp.player.GetComponent<PlayerRotation>().enabled = false;
                 sp.player.GetComponent<PlayerMovement>().enabled = false;
                 sp.player.transform.rotation = this.transform.rotation * Quaternion.Euler(0f, 90f, 0f);
@@ -56,7 +54,6 @@ public class Terminal : NetworkBehaviour
                 termOn.SetActive(true);
                 termOff.SetActive(false);
                 isOccupiedOn();
-            }
         }
     }
     public void DisableTerminal()

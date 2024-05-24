@@ -219,3 +219,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InteractableType: 0
+  interactableKey: 101
+  toWhat: Pick Up
+  HoldTime: 0

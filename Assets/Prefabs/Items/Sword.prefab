@@ -158,6 +158,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InteractableType: 0
+  interactableKey: 101
+  toWhat: Pick Up
+  HoldTime: 0
 --- !u!114 &6107495199971170505
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1283,7 +1283,6 @@ GameObject:
   - component: {fileID: 745683009}
   - component: {fileID: 745683008}
   - component: {fileID: 745683007}
-  - component: {fileID: 745683010}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -1308,7 +1307,6 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours:
   - {fileID: 745683008}
-  - {fileID: 745683010}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -1358,28 +1356,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1769524142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &745683010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745683006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b64bdddfee4f743a70c59ea95adbd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 1
-  _addedNetworkObject: {fileID: 745683007}
-  _networkObjectCache: {fileID: 745683007}
-  StartCount: 0
-  hours: 0
-  days: 0
-  maxSeconds: 30
-  updateTick: 10
-  daysText: {fileID: 193407229}
-  clockText: {fileID: 1244714136}
 --- !u!1 &748304160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,7 +4064,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 2111041087}
   _networkObjectCache: {fileID: 2111041087}
-  _playerPrefab: {fileID: -908925057142310838, guid: 20ad5a8aa04c9f546bc51756e547c799,
+  _playerPrefab: {fileID: 5312313132904472154, guid: 6114f2a7243e23f4998b64124438b0e2,
     type: 3}
   Spawnpoint: {fileID: 58307456}
   playersObjects: []

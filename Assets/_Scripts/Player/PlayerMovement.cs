@@ -19,6 +19,7 @@ public class PlayerMovement : NetworkBehaviour
     private Vector2 keyInput;
     private Vector3 moveDirection;
     private Rigidbody rb;
+    private Animator animator;
 
 
     public override void OnStartClient()
@@ -32,6 +33,7 @@ public class PlayerMovement : NetworkBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();   
         rb.freezeRotation = true;
         currentMovementSpeed = walkSpeed;
     }
@@ -63,6 +65,14 @@ public class PlayerMovement : NetworkBehaviour
     {
         keyInput.x = Input.GetAxisRaw("Horizontal");
         keyInput.y = Input.GetAxisRaw("Vertical");
+        if(keyInput.y > 0)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
     }    
 
     private void MovePlayer()

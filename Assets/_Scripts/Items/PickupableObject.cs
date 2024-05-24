@@ -21,9 +21,6 @@ public class PickupableObject : NetworkBehaviour
 
     public void PickUp()
     {
-        LookingAt.pickupableText.text = "Pick Up " + itemInformation.SendName() + " (E)";
-        if (Input.GetKeyDown(KeyCode.E))
-        {
             if (itemInformation.SendItemType() == "tool")
             {
                 if (inventory.CheckInventory(itemInformation, this.GetComponent<Charge>().charge) == true)
@@ -38,7 +35,6 @@ public class PickupableObject : NetworkBehaviour
                     DespawnObjectServer(this.gameObject);
                 }
             }
-        }
     }
     [ServerRpc(RequireOwnership = false)]
     void DespawnObjectServer(GameObject objToDespawn)
